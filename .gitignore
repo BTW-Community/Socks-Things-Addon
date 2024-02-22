@@ -6,7 +6,7 @@
 !src/**/build/
 
 # Screws up the MC dev plugin for IntelliJ..
-# src/btw/**
+src/btw/**
 
 # Ignore local Minecraft folder
 .minecraft
@@ -20,3 +20,9 @@
 .idea/dictionaries
 .idea/libraries
 .idea/jarRepositories.xml
+
+# Socks Things Addon
+libs/**
+run/**
+reobfuscated/**
+release/**
