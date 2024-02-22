@@ -1,0 +1,2 @@
+= v0.1.0 =
+- Added Nether Gold Ore. Minable with Iron Pick or better. Drops 1 Chunk of Gold Ore.

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "btw.community.sockthing.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "NetherrackBlockMixin",
+    "ChunkProviderHellMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
