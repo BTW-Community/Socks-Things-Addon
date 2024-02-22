@@ -25,7 +25,7 @@ public abstract class ChunkProviderHellMixin implements IChunkProvider {
             target = "Lnet/minecraft/src/WorldGenMinable;<init>(III)V",
             shift = At.Shift.BEFORE
     ))
-    public void replaceBlocksForBiome(IChunkProvider par1IChunkProvider, int x, int z, CallbackInfo ci) {
+    public void populateWithGoldOre(IChunkProvider par1IChunkProvider, int x, int z, CallbackInfo ci) {
 
         WorldGenMinableMetadata worldGenMinable = new WorldGenMinableMetadata(Block.netherrack.blockID, 1, 8, Block.netherrack.blockID);
         int multiX = x * 16;
