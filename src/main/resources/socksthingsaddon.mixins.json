@@ -4,8 +4,8 @@
   "package": "btw.community.sockthing.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "NetherrackBlockMixin",
-    "ChunkProviderHellMixin"
+    "btw.community.socksthings.mixins.NetherrackBlockMixin",
+    "btw.community.socksthings.mixins.ChunkProviderHellMixin"
   ],
   "client": [
   ],

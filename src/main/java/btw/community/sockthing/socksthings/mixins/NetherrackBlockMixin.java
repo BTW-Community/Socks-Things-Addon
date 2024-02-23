@@ -1,10 +1,10 @@
-package btw.community.sockthing.mixins;
+package btw.community.sockthing.socksthings.mixins;
 
 import btw.block.BTWBlocks;
 import btw.block.blocks.FullBlock;
 import btw.block.blocks.NetherrackBlock;
 import btw.client.fx.BTWEffectManager;
-import btw.community.sockthing.SocksThingsAddon;
+import btw.community.sockthing.socksthings.SocksThingsAddon;
 import btw.item.BTWItems;
 import btw.item.items.ChiselItem;
 import btw.item.items.PickaxeItem;

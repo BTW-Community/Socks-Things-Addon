@@ -1,6 +1,6 @@
-package btw.community.sockthing.mixins;
+package btw.community.sockthing.socksthings.mixins;
 
-import btw.community.sockthing.WorldGenMinableMetadata;
+import btw.community.sockthing.socksthings.WorldGenMinableMetadata;
 import net.minecraft.src.Block;
 import net.minecraft.src.ChunkProviderHell;
 import net.minecraft.src.IChunkProvider;

@@ -1,13 +1,9 @@
-package btw.community.sockthing;
+package btw.community.sockthing.socksthings;
 
 import btw.AddonHandler;
 import btw.BTWAddon;
-import btw.BTWMod;
 import btw.block.blocks.NetherrackBlockFalling;
-import btw.world.biome.BiomeDecoratorBase;
 import net.minecraft.src.*;
-
-import java.util.Random;
 
 public class SocksThingsAddon extends BTWAddon {
     private static SocksThingsAddon instance;

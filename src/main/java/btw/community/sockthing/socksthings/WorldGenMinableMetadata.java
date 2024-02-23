@@ -1,4 +1,4 @@
-package btw.community.sockthing;
+package btw.community.sockthing.socksthings;
 
 import net.minecraft.src.Block;
 import net.minecraft.src.MathHelper;
