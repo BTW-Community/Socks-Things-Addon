@@ -1,8 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "socksthingsaddon",
   "version": "${version}",
-
   "name": "Sock's Things Addon",
   "description": "Sock's Things Addon for BTW",
   "authors": [
@@ -10,23 +9,24 @@
   ],
   "contact": {
     "homepage": "https://github.com/BTW-Community/Socks-Things-Addon",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/BTW-Community/Socks-Things-Addon"
   },
-
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "icon": "assets/socksthingsaddon/icon.png",
   "environment": "*",
   "entrypoints": {
+    "btw:addon": [
+      "btw.community.sockthing.socksthings.SocksThingsAddon"
+    ]
+  },
+  "custom": {
+    "btw:addon_prefix": "STA"
   },
   "mixins": [
     "socksthingsaddon.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.7.4"
-  },
-  "suggests": {
-    "flamingo": "*"
+    "fabricloader": ">=0.14.19",
+    "minecraft": "1.6.4"
   }
 }

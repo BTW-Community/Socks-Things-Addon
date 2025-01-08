@@ -1,5 +1,6 @@
 package btw.community.sockthing.socksthings.mixins;
 
+import btw.community.sockthing.socksthings.SocksThingsAddon;
 import btw.community.sockthing.socksthings.WorldGenMinableMetadata;
 import net.minecraft.src.Block;
 import net.minecraft.src.ChunkProviderHell;
@@ -12,10 +13,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import sun.misc.Unsafe;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.lang.reflect.Field;
 import java.util.Random;
 @Mixin(ChunkProviderHell.class)
@@ -32,18 +29,20 @@ public abstract class ChunkProviderHellMixin implements IChunkProvider {
     ))
     public void populateWithGoldOre(IChunkProvider par1IChunkProvider, int x, int z, CallbackInfo ci) {
 
-        Random random = copyRandomUnsafe(this.hellRNG);
+        if (SocksThingsAddon.generateNetherGoldOre) {
+            Random random = copyRandomUnsafe(this.hellRNG);
 
-        WorldGenMinableMetadata worldGenMinable = new WorldGenMinableMetadata(Block.netherrack.blockID, 1, 8, Block.netherrack.blockID);
-        int multiX = x * 16;
-        int multiZ = z * 16;
+            WorldGenMinableMetadata worldGenMinable = new WorldGenMinableMetadata(Block.netherrack.blockID, 1, 8, Block.netherrack.blockID);
+            int multiX = x * 16;
+            int multiZ = z * 16;
 
-        for (int tempIndex = 0; tempIndex < 4; ++tempIndex)
-        {
-            int xPos = multiX + random.nextInt(16);
-            int yPos = random.nextInt(108) + 10;
-            int zPos = multiZ + random.nextInt(16);
-            worldGenMinable.generate(this.worldObj, random, xPos, yPos, zPos);
+            for (int tempIndex = 0; tempIndex < 4; ++tempIndex)
+            {
+                int xPos = multiX + random.nextInt(16);
+                int yPos = random.nextInt(108) + 10;
+                int zPos = multiZ + random.nextInt(16);
+                worldGenMinable.generate(this.worldObj, random, xPos, yPos, zPos);
+            }
         }
     }
 

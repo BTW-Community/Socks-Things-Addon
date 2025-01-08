@@ -195,7 +195,7 @@ public abstract class NetherrackBlockMixin extends FullBlock {
 	@Environment(EnvType.CLIENT)
 	public void registerIcons(IconRegister register) {
 		super.registerIcons(register);
-		gold_ore = register.registerIcon("STABlockNetherGoldOre");
+		gold_ore = register.registerIcon("socksthingsaddon:nether_gold_ore");
 	}
 
 	@Override
